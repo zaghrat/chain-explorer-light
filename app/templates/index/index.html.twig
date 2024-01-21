@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chain Explorer Light!{% endblock %}
+
+{% block body %}
+    {{ form(form) }}
+
+    {% if data|length %}
+        <hr>
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Result: </h3>
+            </div>
+            <div class="col-md-9">
+                <p>{{ data.transactionCount }} Tx</p>
+                <p>{{ data.averageTransactionQuantity }} avg. quantity</p>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
